@@ -1,0 +1,99 @@
+section.section-more-about {
+    padding-top: 4rem;
+    display: grid;
+    align-items: center;
+    @include mq-desktop {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .more-about-text {
+        display: flex;
+        justify-content: center;
+        .square-up {
+            border: 1px solid $border-squares;
+            width: 300px;
+            position: relative;
+            z-index: 10;
+            &:after {
+                display: inline-block;
+                content: "";
+                width: 300px;
+                height: 360px;
+                border: 1px solid $border-squares;
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                z-index: -1;
+            }
+            h2 {
+                color: $yellow;
+                margin: 3rem 0 0 4rem;
+            }
+            .text {
+                width: 80%;
+                margin: 3rem 0 0 4rem;
+                line-height: 1.5;
+            }
+        }
+    }
+    .skills-text {
+        margin-top: 7rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include mq-desktop {
+            margin-top: 0;
+        }
+        .square-up {
+            border: 1px solid $border-squares;
+            width: 300px;
+            max-height: 230px;
+            position: relative;
+            z-index: 10;
+            &:after {
+                display: inline-block;
+                content: "";
+                width: 300px;
+                height: 230px;
+                border: 1px solid $border-squares;
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                z-index: -1;
+            }
+            h2 {
+                color: $yellow;
+                margin: 3rem 0 0 4rem;
+            }
+            .list-skills {
+                display: flex;
+                justify-content: space-between;
+                width: 95%;
+                .list {
+                    li {
+                        margin-top: 1rem;
+                        list-style: none;
+                    }
+                }
+            }
+        }
+        .button {
+            margin: 10rem auto 0 auto;
+            width: 170px;
+            position: relative;
+            a.btn-cv {
+                font-size: 2.2rem;
+                border-radius: 1rem;
+                border: 1px solid $border-squares;
+                padding: 1.5rem 1.5rem;
+                display: inline-block;
+                text-decoration: none;
+                color: $yellow;
+                transition: background-color 1s ease;
+                &:hover {
+                    background-color: #8f2784;
+                }
+            }
+        }
+    }
+}

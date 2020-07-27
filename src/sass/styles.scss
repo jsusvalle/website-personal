@@ -1,0 +1,82 @@
+//* Variables
+$bg-primary: #6F4A8E;
+$bg-secondary: #221F3B;
+$border-squares: #AB239D;
+$bar-gradient: linear-gradient(to right, #8D00FC 0%, #C700D8 100%);
+$yellow: #FCCB1B;
+$red: #FF483D;
+//* Media Querys
+@mixin mq-mobile {
+    @media only screen and (min-width: 440px) {
+        @content;
+    }
+}
+
+@mixin mq-tablet {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mq-desktop {
+    @media only screen and (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin mq-desktop-large {
+    @media only screen and (min-width: 1320px) {
+        @content;
+    }
+}
+
+//* Container
+@mixin container($width, $my:0, $mx:auto) {
+    width: $width;
+    margin: $my $mx;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: $bg-primary;
+    color: #ffffff;
+    font-family: 'Fira Code', monospace;
+}
+
+img {
+    width: 3rem;
+}
+
+//* Globals
+div.container {
+    @include container(95%, 0, auto);
+    background-color: $bg-secondary;
+    border-radius: 1rem;
+}
+
+.spacebar-neon {
+    margin: 8rem auto;
+    width: 20rem;
+    height: .5rem;
+    background-image: $bar-gradient;
+    border-radius: 2rem;
+}
+
+//* Imports
+@import "header";
+@import "section-about";
+@import "section-more-about-me";
+@import "section-portfolio";
+@import "section-contact-me";
+@import "footer";

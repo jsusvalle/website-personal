@@ -1,0 +1,61 @@
+header.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    @include container(95%, 0, auto);
+    .block-left {
+        margin-left: 1rem;
+        display: flex;
+        align-items: center;
+        .main-buttons {
+            img {
+                width: 6rem;
+            }
+        }
+        .block-window {
+            margin-left: 1.5rem;
+            display: flex;
+            align-items: center;
+            background-color: $bg-secondary;
+            padding: 1rem 3rem 1rem 2rem;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+            img {
+                width: 2.5rem;
+                @include mq-desktop {
+                    width: 3rem;
+                }
+            }
+            p {
+                margin: 0;
+                margin-left: 1rem;
+                font-size: 1.3rem;
+                @include mq-desktop {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+    .icon-social {
+        a {
+            display: none;
+            color: #ffffff;
+            font-size: 3rem;
+            margin-right: 1rem;
+            transition: color .5s ease;
+            &:first-child {
+                margin-right: 0.5rem;
+            }
+            @include mq-mobile {
+                display: initial;
+            }
+            @include mq-desktop {
+                font-size: 4rem;
+            }
+            &:hover {
+                color: $red;
+            }
+        }
+    }
+}

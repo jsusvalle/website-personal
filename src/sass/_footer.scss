@@ -1,0 +1,18 @@
+footer.site-footer {
+    p {
+        font-size: 3rem;
+        color: $yellow;
+    }
+    .icon-social {
+        padding: 3rem 0;
+        a {
+            color: #ffffff;
+            font-size: 4rem;
+            margin-right: 2rem;
+            transition: color .5s ease;
+            &:hover {
+                color: $red;
+            }
+        }
+    }
+}

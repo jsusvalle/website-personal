@@ -1,0 +1,56 @@
+section.portfolio {
+    h3 {
+        text-align: center;
+        font-size: 3rem;
+        color: $yellow;
+        margin-bottom: 8rem;
+    }
+    .grid {
+        display: grid;
+        justify-content: center;
+        @include mq-desktop {
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+            grid-gap: 1rem;
+        }
+        .card {
+            width: 30.4rem;
+            margin-bottom: 4rem;
+            border: 2px solid $border-squares;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            .img {
+                img {
+                    width: 30rem;
+                    height: 16rem;
+                }
+            }
+            .text-card {
+                width: 28rem;
+                margin: 0 auto;
+                .title {
+                    font-size: 1.8rem;
+                    color: $yellow;
+                }
+                p {
+                    //margin: 2rem 0 0 1rem;
+                    line-height: 1.5;
+                }
+            }
+            .see-more {
+                a {
+                    margin: 1rem 0 1rem 1rem;
+                    font-size: 2rem;
+                    display: block;
+                    text-decoration: none;
+                    color: $red;
+                    transition: color .5s ease;
+                    &:hover {
+                        color: $yellow;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+section.section-about {
+    padding-top: 8rem;
+    display: grid;
+    align-items: center;
+    @include mq-desktop {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .img-profile {
+        text-align: center;
+        img {
+            width: 30rem;
+            border-radius: 50%;
+            border: 1px solid $border-squares;
+        }
+    }
+    .about-text {
+        margin-top: 5rem;
+        display: flex;
+        justify-content: center;
+        @include mq-desktop {
+            margin-top: 0;
+        }
+        .square-up {
+            border: 1px solid $border-squares;
+            width: 300px;
+            position: relative;
+            z-index: 10;
+            &:after {
+                display: inline-block;
+                content: "";
+                width: 300px;
+                height: 210px;
+                border: 1px solid $border-squares;
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                z-index: -1;
+            }
+            h1 {
+                color: $yellow;
+                margin: 3rem 0 0 4rem;
+            }
+            .text {
+                width: 80%;
+                margin: 3rem 0 0 4rem;
+                line-height: 1.5;
+            }
+        }
+    }
+}
